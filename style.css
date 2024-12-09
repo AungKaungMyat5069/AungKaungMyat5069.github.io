@@ -5,7 +5,6 @@
 :root {
     --header-height: 3.5rem;
 
-
     /* ********* Colors ********** */
     /* Color mode HSL(hue, saturation, lightness) */
     /* Purple : hsl(250, 66%, 75%) */
@@ -60,7 +59,6 @@
     }
     
 }
-
 
 /* ****************** BASE ******************* */
 * {
@@ -128,6 +126,7 @@ img {
 
 .section {
     padding:  4.5rem 0 1rem;
+
 }
 
 .section__title,
@@ -140,7 +139,6 @@ img {
     color: var(--first-color);
     margin-bottom: 2rem;
 }
-
 
 .section__subtitle {
     display: block;
@@ -213,7 +211,6 @@ img {
 .scroll-header {
     box-shadow: 0 4px 4px hsla(0, 0, -4%, 30%);
 }
-
 
 /* ******************* HOME ********************* */
 .home__container {
@@ -324,7 +321,6 @@ img {
     font-size: 1.25rem;
 }
 
-
 .home__scroll-name {
     font-size: var(--small-font-size);
     transform: rotate(-90deg);
@@ -381,7 +377,6 @@ img {
     padding: .75rem .5rem;
 
 }
-
 
 .about__icon {
     font-size: 1.5rem;
@@ -453,4 +448,285 @@ img {
 
 .skills__level {
     font-size: var(--tiny-font-size);
+}
+
+/* *********** SERVICES ************** */
+.services__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding-top: 1rem;
+}
+
+.services__card {
+    background-color: var(--container-color);
+    padding: 3rem 1.5rem 1.5rem;
+    border-radius: 1rem;
+
+}
+
+.services__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: 2.5rem;
+
+}
+
+.services__button {
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    cursor: pointer;
+}
+
+.services__button:hover .services__icon {
+    transform: translateX(.45rem);
+
+
+}
+
+.services__icon {
+    font-size: 1rem;
+    transition: .4s ease;
+}
+
+/* Services modal */
+.services__modal {
+    position: fixed;
+    inset: 0;
+    background-color: hsla(var(--second-hue), 28%, 16%, .7);
+    padding: 2rem 1rem;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+    z-index: var(--z-modal)
+}
+
+
+.services__modal-content {
+    position: relative;
+    background-color: var(--body-color);
+    padding: 4.5rem 1.5rem 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.services__modal-title, 
+.services__modal-description {
+    text-align: center;
+}
+
+.services__modal-title {
+    font-size: var(--h3-font-size);
+    color: var(--first-color);
+    margin-bottom: 1rem;
+}
+
+.services__modal-description {
+    font-size: var(--small-font-size);
+    margin-bottom: 2rem;
+}
+
+.services__modal-list {
+    display: grid;
+    row-gap: .75rem;
+}
+
+.services__modal-item {
+    display: flex;
+    align-items: flex-start;
+    column-gap: .5rem;
+}
+
+.services__modal-icon {
+    font-size: 1.5rem;
+    color: var(--first-color);
+}
+
+.services__modal-info {
+    font-size: var(--small-font-size);
+}
+
+.services__modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    cursor: pointer;
+}
+
+/* Active modal */ 
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ********************** WORK ************************* */
+.work__contaier {
+    padding-top: 1rem;
+}
+
+.work__card {
+    background-color: var(--container-color);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.work__img {
+    border-radius: 1rem;
+    margin-bottom: .75rem;
+}
+
+.work__title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: .25rem;
+}
+
+.work__button {
+    width: max-content;
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+}
+
+.work__button:hover .work__icon {
+    transform: translateX(.25rem);
+}
+
+.work__icon {
+    font-size: 1rem;
+    transition: .4s;
+}
+
+/* ******************* TESTIMONIAL ********************** */
+.testimonial__card {
+    background-color: var(--container-color);
+    padding: 1.25rem 1.5rem;
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.testimonial__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 3rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: .25rem;
+}
+
+.testimonial__description {
+    font-size: var(--small-font-size);
+}
+
+/* ******************** CONTACT ************************* */
+.contact__container {
+    row-gap: 3rem;
+    padding-bottom: 3rem;
+
+}
+
+.contact__title {
+    text-align: center;
+    font-size: var(--h3-font-size);
+    margin-bottom: 1.5rem;
+}
+
+.contact__info {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact__card {
+    background-color: var(--container-color);
+    padding: 1rem;
+    border-radius: .75rem;
+    text-align: center;
+}
+
+.contact__card-icon {
+    font-size: 2rem;
+    color: var(--title-color);
+    margin-bottom: .25rem;
+}
+
+.contact__card-title,
+.contact__card-data {
+    font-size: var(--small-font-size);
+}
+
+.contact__card-title {
+    font-weight: var(--font-medium);
+}
+
+.contact__card-data {
+    display: block;
+    margin-bottom: .75rem;
+}
+
+.contact__button {
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .25rem;
+}
+
+.contact__button:hover .contact__button-icon {
+    transform: translateX(.25rem);
+}
+
+.contact__button-icon {
+    font-size: 1rem;
+    transition: .4s;
+}
+
+.contact__form-div {
+    position: relative;
+    margin-bottom: 2rem;
+    height: 4rem;
+}
+
+.contact__form-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--text-color-light);
+    background: none;
+    color: var(--text-color);
+    outline: none;
+    padding: 1.5rem;
+    border-radius: .75rem;
+    z-index: 1;
+}
+
+.contact__form-tag {
+    position: absolute;
+    top: -.75rem;
+    left: 1.25rem;
+    font-size: var(--small-font-size);
+    padding: .25rem;
+    background-color: var(--body-color);
+    z-index: 10;
+}
+
+    
+.contact__form-area {
+    height: 11rem;
+}
+
+.contact__form-area textarea {
+    resize: none;
 }
