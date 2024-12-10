@@ -116,10 +116,16 @@ const sr = ScrollReveal( {
   origin: 'top',
   distance: '60px',
   duration: 2500,
-  delay: 400,
-  // reset: true,
+  delay: 300,
+  reset: true,
 })
 
 sr.reveal(`.home__data`)
-sr.reveal(`.home__handle`, {delay: 700})
-sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: "bottom"})
+sr.reveal(`.home__handle`, {delay: 400})
+sr.reveal(`.home__social, .home__scroll, .services__card, .work__card`, {delay: 500, origin: "bottom"})
+sr.reveal('.about__img, .testimonial__card, .contact__content', {origin: 'left'})
+sr.reveal('.about__data', {origin: 'right'})
+sr.reveal('.button', {delay: 700})
+sr.reveal('.skills__container')
+sr.reveal(' .skills__data', {delay: 600, origin: 'left'})
+sr.reveal(`.services__button`, {delay: 600, origin: 'right'})
