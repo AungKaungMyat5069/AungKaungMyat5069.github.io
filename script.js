@@ -45,7 +45,7 @@ var swiper = new Swiper(`.testimonial__container`, {
       640: {
         slidesPerView: 1,
       },
-      776: {
+      720: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
@@ -123,7 +123,7 @@ const sr = ScrollReveal( {
 sr.reveal(`.home__data`)
 sr.reveal(`.home__handle`, {delay: 400})
 sr.reveal(`.home__social, .home__scroll,  .work__card`, {delay: 500, origin: "bottom"})
-sr.reveal('.about__img, .testimonial__card, .contact__content', {origin: 'left'})
+sr.reveal('.about__img,  .contact__content', {origin: 'left'})
 sr.reveal('.about__data', {origin: 'right'})
 sr.reveal('.button', {delay: 700})
 sr.reveal('.skills__container')

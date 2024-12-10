@@ -918,6 +918,10 @@ body.light-theme {
         grid-template-columns: 145px;
         justify-content: center;
     }
+
+    .work__card {
+        width: fit-content;
+    }
 }
 
 /* for medium devices */
@@ -968,6 +972,8 @@ body.light-theme {
         width: 295px;
     }
 
+    
+
     .contact__info {
         grid-template-columns: 300px;
         justify-content: center;
@@ -983,13 +989,15 @@ body.light-theme {
     }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 732px) {
 
     .contact__container {
         grid-template-columns: repeat(2, max-content);
         justify-content: center;
         column-gap: 3rem;
     }
+
+
 }
 
 
