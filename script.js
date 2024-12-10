@@ -32,7 +32,7 @@ modalClose.forEach((mc) => {
 })
 
 /* ****************** SWIPER TESTIMONIAL ************** */
-var swiper = new Swiper(".testimonial__container", {
+var swiper = new Swiper(`.testimonial__container`, {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: true,
@@ -45,9 +45,13 @@ var swiper = new Swiper(".testimonial__container", {
       640: {
         slidesPerView: 1,
       },
-      960: {
+      776: {
         slidesPerView: 2,
-        spaceBetween: 48,
+        spaceBetween: 20,
+      },
+      960: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
       
     },
@@ -104,3 +108,18 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+
+/* *************** SCROLL REVEAL ANIMATION************** */
+const sr = ScrollReveal( {
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  // reset: true,
+})
+
+sr.reveal(`.home__data`)
+sr.reveal(`.home__handle`, {delay: 700})
+sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: "bottom"})
